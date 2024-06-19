@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.http import *
-
+from django.template.response import TemplateResponse
 
 def index(request):
-    return HttpResponse("<h2>Главная</h2>")
+    return TemplateResponse(request, "firstapp/home.html")
 
 
 def about(request):
