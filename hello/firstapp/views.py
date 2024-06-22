@@ -1,16 +1,20 @@
 from django.shortcuts import render
 from django.http import *
 from django.template.response import TemplateResponse
-
+import datetime
 
 def index(request):
-    header = "Разветвления в шаблонах"
-    num = 1
-    var1 = "Это первая ветка инструкции if"
-    var2 = "Это вторая ветка в инструкции if"
-    data = {"header": header, "num": num, "var1": var1, "var2": var2}
-
+    header = "Фильтры в шаблонах"
+    value_num = 2
+    value_date = datetime.datetime.now()
+    value_time = datetime.datetime.now()
+    value_title = "это пример использования фильров"
+    value_upper = "эта строка в верхнем регистре"
+    data = {"header": header, "value_num": value_num, "value_date":value_date,
+            "value_time":value_time, "value_title": value_title, "value_upper":value_upper
+    }
     return TemplateResponse(request, "firstapp/index_app1.html", data)
+
 
 
 def about(request):
