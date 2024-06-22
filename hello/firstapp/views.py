@@ -4,12 +4,13 @@ from django.template.response import TemplateResponse
 
 
 def index(request):
-    header = "Персональные данные"
-    langs = ["Английский", "Немецкий", "Испанский"]
+    header = "Иностранные языки"
+    list_langs = ["Английский", "Немецкий", "Испанский",
+             "Французкий", "Итальянский"]
     user = {"name": "Максим,","age": 30}
     addr = ("Виноградная", 23, 45)
-    data = {"header": header, "langs": langs, "user": user, "address": addr}
-    return render(request, "index.html", context=data)
+    data = {"header": header, "list_langs": list_langs}
+    return render(request, "firstapp/index_app1.html", context=data)
 
 
 def about(request):

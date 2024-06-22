@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Привет Django</title>
+    <title>Шаблоны</title>
 </head>
 <body>
     <h1>{{header}}</h1>
-    <p>{{message}}</p>
+    {% for lang in list_langs%}
+        <li>{{lang}}</li>
+    {%endfor%}
 </body>
 </html>
