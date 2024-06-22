@@ -2,8 +2,14 @@ from django.shortcuts import render
 from django.http import *
 from django.template.response import TemplateResponse
 
+
 def index(request):
-    return TemplateResponse(request, "firstapp/home.html")
+    header = "Персональные данные"
+    langs = ["Английский", "Немецкий", "Испанский"]
+    user = {"name": "Максим,","age": 30}
+    addr = ("Виноградная", 23, 45)
+    data = {"header": header, "langs": langs, "user": user, "address": addr}
+    return render(request, "index.html", context=data)
 
 
 def about(request):

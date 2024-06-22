@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Привет пользователь</title>
+    <title>Передача сложных данных</title>
 </head>
 <body>
-    <h1>Вы на главной странице Django!</h1>
-    <h2>templates/index.html</h2>
+    <h1>{{header}}</h1>
+    <p>Имя: {{user.name}} Age:{{user.age}}</p>
+    <p>Адресс: ул. {{address.0}}, дом.{{address.1}}, кв.{{address.2}}</p>
+    <p>Влдаеет языками: {{langs.0}},{{langs.1}}
 </body>
 </html>
