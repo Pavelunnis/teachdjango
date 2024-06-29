@@ -5,16 +5,15 @@ from django.template.response import TemplateResponse
 
 
 def index(request):
-    return render(request, "firstapp/home.html")
+    return render(request, "firstapp/index.html")
 
 
 def about(request):
-    return HttpResponse("<h2>О Сайте</h2>")
+    return render(request, template_name="firstapp/about.html")
 
 
 def contact(request):
-    return HttpResponseRedirect("/about") # временная переадресация | будет перенаправлять на /about
-    # return HttpResponse("<h2>Контакты</h2>")
+    return render(request, template_name="firstapp/contact.html")
 
 
 def products(request, productid=1):
